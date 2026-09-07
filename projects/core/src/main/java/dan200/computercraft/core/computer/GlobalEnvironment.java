@@ -14,8 +14,8 @@ import java.io.InputStream;
  */
 public interface GlobalEnvironment {
     /**
-     * Get a "host" string describing the program hosting CC. It should be of the form {@literal ComputerCraft
-     * $CC_VERSION ($HOST)}, where {@literal $HOST} is a user-defined string such as {@literal Minecraft 1.19}.
+     * Get a "host" string describing the program hosting CC. It should be of the form {@literal CC: Rewired
+     * $CC_VERSION ($HOST)}, where {@literal $HOST} is a user-defined string such as {@literal Minecraft 1.20.1}.
      *
      * @return The host string.
      */

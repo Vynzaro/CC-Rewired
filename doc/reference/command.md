@@ -78,7 +78,7 @@ Turn on one or more computers or, if no run with no arguments, all loaded comput
 ### `/computercraft shutdown [computers...]` {#shutdown}
 Shutdown one or more computers or, if no run with no arguments, all loaded computers.
 
-This is sometimes useful when dealing with lag, as a way to ensure that ComputerCraft is not causing problems.
+This is sometimes useful when dealing with lag, as a way to ensure that CC: Rewired is not causing problems.
 
 #### Examples
  - `/computercraft shutdown`: Shut down all loaded computers.

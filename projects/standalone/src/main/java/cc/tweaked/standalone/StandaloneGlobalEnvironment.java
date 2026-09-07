@@ -29,7 +29,7 @@ public class StandaloneGlobalEnvironment implements GlobalEnvironment {
 
     @Override
     public String getHostString() {
-        return "ComputerCraft (standalone)";
+        return "CC: Rewired (standalone)";
     }
 
     @Override

@@ -63,7 +63,7 @@ public final class LanguageProvider implements DataProvider {
     }
 
     private void addTranslations() {
-        add("itemGroup.computercraft", "ComputerCraft");
+        add("itemGroup.computercraft", "CC: Rewired");
 
         // Blocks and items
         add(ModRegistry.Items.COMPUTER_NORMAL.get(), "Computer");

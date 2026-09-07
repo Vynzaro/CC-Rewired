@@ -221,7 +221,7 @@ public final class ServerContext {
         @Override
         public String getHostString() {
             var version = SharedConstants.getCurrentVersion().getName();
-            return String.format("ComputerCraft %s (Minecraft %s)", ComputerCraftAPI.getInstalledVersion(), version);
+            return String.format("CC: Rewired %s (Minecraft %s)", ComputerCraftAPI.getInstalledVersion(), version);
         }
 
         @Override

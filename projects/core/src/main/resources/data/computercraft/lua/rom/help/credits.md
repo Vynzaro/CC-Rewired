@@ -1,3 +1,9 @@
+CC: Rewired is maintained by Vynzaro.
+Source code: https://github.com/Vynzaro/CC-Rewired
+
+# Project Lineage
+CC: Rewired is an independent fork of CC: Tweaked. CC: Tweaked is itself a fork of ComputerCraft.
+
 ComputerCraft was created by Daniel "dan200" Ratcliffe, with additional code by Aaron "Cloudy" Mills.
 Thanks to nitrogenfingers, GopherATL and RamiLego for program contributions.
 Thanks to Mojang, the Forge team, and the MCP team.
@@ -9,9 +15,9 @@ Visit http://www.minecraftu.org and http://www.deepspace.me/space-cadets to find
 Join the ComputerCraft community online at https://computercraft.cc
 Follow @DanTwoHundred on Twitter!
 
-To help contribute to CC: Tweaked, browse the source code at https://github.com/cc-tweaked/cc-tweaked.
+CC: Rewired preserves the copyright and license notices of ComputerCraft, CC: Tweaked and third-party contributors.
 
-# GitHub
+# Upstream Contributors
 Numerous people have contributed to CC: Tweaked over the years:
 
 ${gitContributors}
@@ -19,10 +25,10 @@ ${gitContributors}
 Thank you to everyone who has contributed
 
 # Software Licenses
-CC: Tweaked would not be possible without the work of other open source libraries. Their licenses are included below:
+CC: Rewired would not be possible without CC: Tweaked and other open source libraries. Their licenses are included below:
 
 ## Apache 2.0
-CC: Tweaked contains code from the following Apache 2.0 licensed libraries:
+CC: Rewired contains code from the following Apache 2.0 licensed libraries:
 
  - Netty (https://github.com/netty/netty)
 
@@ -83,7 +89,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 END OF TERMS AND CONDITIONS
 
 ## GNU Lesser General Public License 3.0
-CC: Tweaked contains code from the following LGPL 3.0 licensed libraries:
+CC: Rewired contains code from the following LGPL 3.0 licensed libraries:
 
  - NightConfig (https://github.com/TheElectronWill/night-config/tree/master)
 

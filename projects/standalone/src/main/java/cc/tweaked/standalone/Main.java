@@ -50,7 +50,7 @@ import static org.lwjgl.opengl.GL45C.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 /**
- * A standalone UI for CC: Tweaked computers.
+ * A standalone UI for CC: Rewired computers.
  * <p>
  * This displays a computer terminal using OpenGL and GLFW, without having to load all of Minecraft.
  * <p>
@@ -283,7 +283,7 @@ public class Main {
         var window = glfwCreateWindow(
             SCALE * (MARGIN * 2 + PIXEL_WIDTH * terminal.getWidth()),
             SCALE * (MARGIN * 2 + PIXEL_HEIGHT * terminal.getHeight()),
-            "CC: Tweaked - Standalone", NULL, NULL
+            "CC: Rewired - Standalone", NULL, NULL
         );
         if (window == NULL) throw new RuntimeException("Failed to create the GLFW window");
         gl.add(() -> {

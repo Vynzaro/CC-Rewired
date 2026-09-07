@@ -1,6 +1,7 @@
-Please report bugs at https://github.com/cc-tweaked/CC-Tweaked. Thanks!
-View the documentation at https://tweaked.cc
-Show off your programs or ask for help at our forum: https://forums.computercraft.cc
+Welcome to CC: Rewired alpha. Expect changes between development builds.
+Report bugs at https://github.com/Vynzaro/CC-Rewired/issues
+Official downloads: https://modrinth.com/project/cc-rewired
+ComputerCraft community forum: https://forums.computercraft.cc
 You can disable these messages by running "set motd.enable false".
 Use "pastebin put" to upload a program to pastebin.
 Use the "edit" program to create and edit your programs.

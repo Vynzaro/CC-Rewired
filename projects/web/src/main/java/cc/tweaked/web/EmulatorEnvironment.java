@@ -28,7 +28,7 @@ final class EmulatorEnvironment implements GlobalEnvironment {
 
     @Override
     public String getHostString() {
-        return "ComputerCraft " + version + " (tweaked.cc)";
+        return "CC: Rewired " + version + " (web emulator)";
     }
 
     @Override

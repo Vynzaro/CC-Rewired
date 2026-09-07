@@ -82,6 +82,6 @@ public class ClientTableFormatter implements TableFormatter {
     }
 
     private static GuiMessageTag createTag(String id) {
-        return new GuiMessageTag(0xa0a0a0, null, null, "ComputerCraft/" + id);
+        return new GuiMessageTag(0xa0a0a0, null, null, "CC: Rewired/" + id);
     }
 }

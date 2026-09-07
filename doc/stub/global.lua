@@ -114,7 +114,7 @@ the prompt.
 ]]
 function read(replaceChar, history, completeFn, default) end
 
---- Stores the current ComputerCraft and Minecraft versions.
+--- Stores the current CC: Rewired and Minecraft versions.
 --
 -- Outside of Minecraft (for instance, in an emulator) [`_HOST`] will contain the
 -- emulator's version instead.
@@ -122,7 +122,7 @@ function read(replaceChar, history, completeFn, default) end
 -- If you need to check for the presence of a feature, it is usually better to
 -- rely on feature detection, rather than comparing mod or Minecraft versions.
 --
--- For example, `ComputerCraft 1.93.0 (Minecraft 1.15.2)`.
+-- For example, `CC: Rewired 0.1.0-alpha.1 (Minecraft 1.20.1)`.
 -- @usage Print the current computer's environment.
 --
 --     print(_HOST)
@@ -130,7 +130,7 @@ function read(replaceChar, history, completeFn, default) end
 -- @since 1.76
 _HOST = _HOST
 
---[[- The default computer settings as defined in the ComputerCraft
+--[[- The default computer settings as defined in the CC: Rewired
 configuration.
 
 This is a comma-separated list of settings pairs defined by the mod

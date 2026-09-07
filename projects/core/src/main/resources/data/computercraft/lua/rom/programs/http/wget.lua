@@ -26,7 +26,7 @@ local url = table.remove(tArgs, 1)
 
 if not http then
     printError("wget requires the http API, but it is not enabled")
-    printError("Set http.enabled to true in CC: Tweaked's server config")
+    printError("Set http.enabled to true in CC: Rewired's server config")
     return
 end
 

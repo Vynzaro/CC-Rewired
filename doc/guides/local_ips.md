@@ -9,9 +9,9 @@ SPDX-License-Identifier: MPL-2.0
 -->
 
 # Allowing access to local IPs
-By default, ComputerCraft blocks access to local IP addresses for security. This means you can't normally access any
+By default, CC: Rewired blocks access to local IP addresses for security. This means you can't normally access any
 HTTP server running on your computer. However, this may be useful for testing programs without having a remote
-server. You can unblock these IPs in the ComputerCraft config.
+server. You can unblock these IPs in the CC: Rewired server config.
 
  - [Minecraft 1.13 and later, CC:T 1.87.0 and later](#cc-1.87.0)
  - [Minecraft 1.13 and later, CC:T 1.86.2 and earlier](#cc-1.86.2)

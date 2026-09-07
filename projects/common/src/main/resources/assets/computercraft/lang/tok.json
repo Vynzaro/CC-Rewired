@@ -101,7 +101,7 @@
     "item.computercraft.printed_page": "lipu pi ilo sitelen",
     "item.computercraft.printed_pages": "lipu mute pi ilo sitelen",
     "item.computercraft.treasure_disk": "lipu sona",
-    "itemGroup.computercraft": "ComputerCraft",
+    "itemGroup.computercraft": "CC: Rewired",
     "tracking_field.computercraft.computer_tasks.name": "pali",
     "tracking_field.computercraft.count": "%s (mute)",
     "tracking_field.computercraft.max": "%s (sewi)",

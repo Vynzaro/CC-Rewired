@@ -15,7 +15,7 @@ import java.util.concurrent.ThreadFactory;
  */
 public final class ThreadUtils {
     private static final Logger LOG = LoggerFactory.getLogger(ThreadUtils.class);
-    private static final ThreadGroup baseGroup = new ThreadGroup("ComputerCraft");
+    private static final ThreadGroup baseGroup = new ThreadGroup("CC-Rewired");
 
     /**
      * A lower thread priority (though not the minimum), used for most of ComputerCraft's threads.
@@ -33,7 +33,7 @@ public final class ThreadUtils {
     /**
      * Get the base thread group, that all off-thread ComputerCraft activities are run on.
      *
-     * @return The ComputerCraft group.
+     * @return The CC: Rewired group.
      */
     public static ThreadGroup group() {
         return baseGroup;
@@ -42,8 +42,8 @@ public final class ThreadUtils {
     /**
      * Create a new {@link ThreadFactoryBuilder}, which constructs threads under a group of the given {@code name}.
      * <p>
-     * Each thread will be of the format {@code ComputerCraft-<name>-<number>}, and belong to a group
-     * called {@code ComputerCraft-<name>} (which in turn will be a child group of the main {@code ComputerCraft} group.
+     * Each thread will be of the format {@code CC-Rewired-<name>-<number>}, and belong to a group
+     * called {@code CC-Rewired-<name>} (which in turn will be a child group of the main {@code CC-Rewired} group.
      *
      * @param name The name for the thread group and child threads.
      * @return The constructed thread factory builder, which may be extended with other properties.
@@ -61,8 +61,8 @@ public final class ThreadUtils {
     /**
      * Create a new {@link ThreadFactory}, which constructs threads under a group of the given {@code name}.
      * <p>
-     * Each thread will be of the format {@code ComputerCraft-<name>-<number>}, and belong to a group
-     * called {@code ComputerCraft-<name>} (which in turn will be a child group of the main {@code ComputerCraft} group.
+     * Each thread will be of the format {@code CC-Rewired-<name>-<number>}, and belong to a group
+     * called {@code CC-Rewired-<name>} (which in turn will be a child group of the main {@code CC-Rewired} group.
      *
      * @param name The name for the thread group and child threads.
      * @return The constructed thread factory.

@@ -116,7 +116,7 @@ public final class ResourceMount extends ArchiveMount<ResourceMount.FileEntry> {
     public static final SimplePreparableReloadListener<Void> RELOAD_LISTENER = new SimplePreparableReloadListener<>() {
         @Override
         protected Void prepare(ResourceManager manager, ProfilerFiller profiler) {
-            profiler.push("Reloading ComputerCraft mounts");
+            profiler.push("Reloading CC: Rewired mounts");
             try {
                 for (var mount : MOUNT_CACHE.values()) mount.load(manager);
             } finally {

@@ -14,7 +14,7 @@ The [`rednet_message`] event is fired when a message is sent over Rednet.
 
 This event is usually handled by [`rednet.receive`], but it can also be pulled manually.
 
-[`rednet_message`] events are sent by [`rednet.run`] in the top-level coroutine in response to [`modem_message`] events. A [`rednet_message`] event is always preceded by a [`modem_message`] event. They are generated inside CraftOS rather than being sent by the ComputerCraft machine.
+[`rednet_message`] events are sent by [`rednet.run`] in the top-level coroutine in response to [`modem_message`] events. A [`rednet_message`] event is always preceded by a [`modem_message`] event. They are generated inside CraftOS rather than being sent by the CC: Rewired machine.
 
 ## Return Values
 1. [`string`]: The event name.

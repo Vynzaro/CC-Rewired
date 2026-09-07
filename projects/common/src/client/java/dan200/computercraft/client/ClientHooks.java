@@ -142,7 +142,7 @@ public final class ClientHooks {
      */
     public static void addGameDebugInfo(Consumer<String> addText) {
         if (MonitorBlockEntityRenderer.hasRenderedThisFrame() && Minecraft.getInstance().options.renderDebug) {
-            addText.accept("[CC:T] Monitor renderer: " + MonitorBlockEntityRenderer.currentRenderer());
+            addText.accept("[CC:RW] Monitor renderer: " + MonitorBlockEntityRenderer.currentRenderer());
         }
     }
 

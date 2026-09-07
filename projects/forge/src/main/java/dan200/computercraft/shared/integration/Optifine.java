@@ -70,14 +70,14 @@ public final class Optifine {
 
         send.accept(
             Component.literal("")
-                .append(Component.literal("(CC: Tweaked) ").withStyle(ChatFormatting.GRAY))
+                .append(Component.literal("(CC: Rewired) ").withStyle(ChatFormatting.GRAY))
                 .append(Component.literal("[WARNING] ").withStyle(ChatFormatting.RED))
                 .append("It looks like you're running Optifine. This has an ")
                 .append(Component.literal("unfixed issue").withStyle(s -> s
                     .withColor(ChatFormatting.BLUE).withUnderlined(true)
                     .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://github.com/sp614x/optifine/issues/7549"))
                 ))
-                .append(" which causes issues with many modded block entities, including those added by CC: Tweaked. " +
+                .append(" which causes issues with many modded block entities, including those added by CC: Rewired. " +
                     "Please replace Optifine with an alternative shader mod such as Oculus.")
         );
     }
