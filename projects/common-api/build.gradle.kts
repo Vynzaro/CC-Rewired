@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2022 The CC: Tweaked Developers
+// SPDX-FileCopyrightText: 2026 Vynzaro
 //
 // SPDX-License-Identifier: MPL-2.0
 
@@ -42,7 +43,7 @@ val javadocOverview = tasks.register<Copy>("javadocOverview") {
 }
 
 tasks.javadoc {
-    title = "CC: Tweaked $version for Minecraft $mcVersion"
+    title = "CC: Rewired $version for Minecraft $mcVersion"
     include("dan200/computercraft/api/**/*.java")
 
     options {

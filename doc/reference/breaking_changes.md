@@ -10,15 +10,15 @@ SPDX-License-Identifier: MPL-2.0
 
 # Incompatibilities between versions
 
-CC: Tweaked tries to remain as compatible between versions as possible, meaning most programs written for older versions
+CC: Rewired tries to remain as compatible as possible with its CC: Tweaked base, meaning most programs written for older versions
 of the mod should run fine on later versions.
 
 > [External peripherals][!WARNING]
 >
-> While CC: Tweaked is relatively stable across versions, this may not be true for other mods which add their own
+> While CC: Rewired's inherited APIs are relatively stable across versions, this may not be true for other mods which add their own
 > peripherals. Older programs which interact with external blocks may not work on newer versions of the game.
 
-However, some changes to the underlying game, or CC: Tweaked's own internals may break some programs. This page serves
+However, some changes to the underlying game or CC: Rewired's own internals may break some programs. This page serves
 as documentation for breaking changes and "gotchas" one should look out for between versions.
 
 ## CC: Tweaked 1.109.0 to 1.109.3 {#cct-1.109}
@@ -60,7 +60,7 @@ as documentation for breaking changes and "gotchas" one should look out for betw
 
    - Data packs [impose some restrictions on file names][legal_data_pack]. As a result, your programs and directories
      must all be lower case.
-   - Due to how data packs are read by CC: Tweaked, you may need to use the `/reload` command to see changes to your
+   - Due to how data packs are read by CC: Rewired, you may need to use the `/reload` command to see changes to your
      pack show up on the computer.
 
    See [the example datapack][datapack-example] for how to get started.

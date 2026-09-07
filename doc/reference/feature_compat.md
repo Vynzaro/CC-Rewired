@@ -8,8 +8,8 @@ SPDX-FileCopyrightText: 2022 The CC: Tweaked Developers
 SPDX-License-Identifier: MPL-2.0
 -->
 
-# Lua 5.2/5.3 features in CC: Tweaked
-CC: Tweaked is based off of the Cobalt Lua runtime, which uses Lua 5.2. However, Cobalt and CC:T implement additional
+# Lua 5.2/5.3 features in CC: Rewired
+CC: Rewired is based on the Cobalt Lua runtime inherited from CC: Tweaked, which uses Lua 5.2. Cobalt and CC: Rewired implement additional
 features from Lua 5.2 and 5.3 (as well as some deprecated 5.0 and 5.1 features). This page lists all of the
 compatibility for these newer versions.
 
@@ -26,7 +26,7 @@ compatibility for these newer versions.
 | `__ipairs` metamethod                                         | ❌         | Deprecated in Lua 5.3. `ipairs` uses `__len`/`__index` instead.   |
 | `__pairs` metamethod                                          | ✔          |                                                                   |
 | `bit32` library                                               | ✔          |                                                                   |
-| `collectgarbage` isrunning, generational, incremental options | ❌         | `collectgarbage` does not exist in CC:T.                          |
+| `collectgarbage` isrunning, generational, incremental options | ❌         | `collectgarbage` does not exist in CC: Rewired.                   |
 | New `load` syntax                                             | ✔          |                                                                   |
 | `loadfile` mode parameter                                     | ✔          | Supports both 5.1 and 5.2+ syntax.                                |
 | Removed `loadstring`                                          | ❌         |                                                                   |
@@ -51,13 +51,13 @@ compatibility for these newer versions.
 | `math.log` base argument                                      | ✔          |                                                                   |
 | Removed `math.log10`                                          | ❌         |                                                                   |
 | `*L` mode to `file:read`                                      | ✔          |                                                                   |
-| `os.execute` exit type + return value                         | ❌         | `os.execute` does not exist in CC:T.                              |
-| `os.exit` close argument                                      | ❌         | `os.exit` does not exist in CC:T.                                 |
+| `os.execute` exit type + return value                         | ❌         | `os.execute` does not exist in CC: Rewired.                       |
+| `os.exit` close argument                                      | ❌         | `os.exit` does not exist in CC: Rewired.                          |
 | `istailcall` field in `debug.getinfo`                         | ❌         |                                                                   |
 | `nparams` field in `debug.getinfo`                            | ✔          |                                                                   |
 | `isvararg` field in `debug.getinfo`                           | ✔          |                                                                   |
 | `debug.getlocal` negative indices for varargs                 | ❌         |                                                                   |
-| `debug.getuservalue`/`debug.setuservalue`                     | ❌         | Userdata are rarely used in CC:T, so this is not necessary.       |
+| `debug.getuservalue`/`debug.setuservalue`                     | ❌         | Userdata are rarely used in CC: Rewired, so this is not necessary.|
 | `debug.upvalueid`                                             | ✔          |                                                                   |
 | `debug.upvaluejoin`                                           | ✔          |                                                                   |
 | Tail call hooks                                               | ❌         |                                                                   |

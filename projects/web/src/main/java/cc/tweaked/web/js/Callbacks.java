@@ -33,7 +33,7 @@ public class Callbacks {
     public static native void setup(AddComputer addComputer);
 
     /**
-     * Get the version of CC: Tweaked.
+     * Get the version of CC: Rewired.
      *
      * @return The mod's version.
      */

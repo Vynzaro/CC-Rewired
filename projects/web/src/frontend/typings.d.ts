@@ -158,7 +158,7 @@ declare module "cct/classes.js" {
         setup(addComputer: (computer: ComputerDisplay) => ComputerHandle): void;
 
         /**
-         * The version of CC: Tweaked currently loaded.
+         * The version of CC: Rewired currently loaded.
          */
         modVersion: string;
 

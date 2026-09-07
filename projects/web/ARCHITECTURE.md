@@ -1,19 +1,20 @@
 <!--
 SPDX-FileCopyrightText: 2023 The CC: Tweaked Developers
+SPDX-FileCopyrightText: 2026 Vynzaro
 
 SPDX-License-Identifier: MPL-2.0
 -->
 
 # Architecture
-As mentioned in the main architecture guide, the web subproject is responsible for building CC: Tweaked's documentation
+As mentioned in the main architecture guide, the web subproject is responsible for building CC: Rewired's documentation
 website. This is surprisingly more complex than one might initially assume, hence the need for this document at all!
 
 ## Web-based emulator
 Most of the complexity comes from the web-based emulator we embed in our documentation. This uses [TeaVM] to compile
-CC: Tweaked's core to Javascript, and then call out to it in the main site.
+CC: Rewired's core to Javascript, and then call out to it in the main site.
 
 The code for this is split into three separate components:
- - `src/main`: This holds the emulator itself: this is a basic Java project which depends on CC:T's core, and exposes an
+ - `src/main`: This holds the emulator itself: this is a basic Java project which depends on CC: Rewired's core, and exposes an
    interface for Javascript code.
 
    Some of our code (or dependencies) cannot be compiled to Javascript, for instance most of our HTTP implementation. In

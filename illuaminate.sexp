@@ -1,6 +1,7 @@
 ; -*- mode: Lisp;-*-
 
 ; SPDX-FileCopyrightText: 2021 The CC: Tweaked Developers
+; SPDX-FileCopyrightText: 2026 Vynzaro
 ;
 ; SPDX-License-Identifier: MPL-2.0
 
@@ -18,10 +19,10 @@
   (index doc/index.md)
 
   (site
-    (title "CC: Tweaked")
+    (title "CC: Rewired")
     (logo projects/common/src/main/resources/pack.png)
-    (url https://tweaked.cc/)
-    (source-link https://github.com/cc-tweaked/CC-Tweaked/blob/${commit}/${path}#L${line})
+    (url https://github.com/Vynzaro/CC-Rewired)
+    (source-link https://github.com/Vynzaro/CC-Rewired/blob/${commit}/${path}#L${line})
 
     (styles  /projects/web/build/rollup/index.css)
     (scripts /projects/web/build/rollup/index.js)

@@ -97,7 +97,7 @@ function sleep(time) end
 
 --- Get the current CraftOS version (for example, `CraftOS 1.9`).
 --
--- This is defined by `bios.lua`. For the current version of CC:Tweaked, this
+-- This is defined by `bios.lua`. For the current version of CC: Rewired, this
 -- should return `CraftOS 1.9`.
 --
 -- If you need to check for the presence of a feature, it is usually better to

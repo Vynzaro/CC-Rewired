@@ -1,116 +1,96 @@
 <!--
-SPDX-FileCopyrightText: 2020 The CC: Rewired Developers
+SPDX-FileCopyrightText: 2020 The CC: Tweaked Developers
 SPDX-FileCopyrightText: 2026 Vynzaro
 
 SPDX-License-Identifier: MPL-2.0
 -->
 
 # Contributing to CC: Rewired
-As with many open source projects, CC: Rewired thrives on contributions from other people! This document (hopefully)
-provides an introduction as to how to get started with helping out.
 
-If you've any other questions, [just ask the community][community] or [open an issue][new-issue].
-
-## Table of Contents
- - [Reporting issues](#reporting-issues)
- - [Translations](#translations)
- - [Setting up a development environment](#setting-up-a-development-environment)
- - [Developing CC: Rewired](#developing-cc-Rewired)
- - [Writing documentation](#writing-documentation)
+CC: Rewired welcomes focused bug reports, design proposals, documentation and code contributions. The project is in
+early development, so discuss large changes in an issue before implementing them.
 
 ## Reporting issues
-If you have a bug, suggestion, or other feedback, the best thing to do is [file an issue][new-issue]. When doing so, do
-use the issue templates - they provide a useful hint on what information to provide.
 
-## Translations
-Translations are managed through [CrowdIn], an online interface for managing language strings.
+Use the repository's [issue templates]. Search existing issues first and include the CC: Rewired version, Minecraft
+version, mod loader, logs and exact reproduction steps.
 
-## Setting up a development environment
-In order to develop CC: Rewired, you'll need to download the source code and then run it.
+Do not report CC: Tweaked bugs here unless they can be reproduced with a CC: Rewired build.
 
- - Make sure you've got the following software installed:
-   - Java Development Kit 25 (JDK). This can be downloaded from [Adoptium].
-   - [Git](https://git-scm.com/).
-   - [NodeJS 20 or later][node].
+## Development environment
 
- - Download CC: Rewired's source code:
-   ```
-   git clone https://github.com/cc-Rewired/CC-Rewired.git
-   cd CC-Rewired
-   ```
+The complete build uses:
 
- - Build CC: Rewired with `./gradlew build`. This will be very slow the first time it runs, as it needs to download a
-   lot of dependencies (and decompile Minecraft several times). Subsequent runs should be much faster!
+- JDK 25. Gradle targets Java 17 bytecode for Minecraft 1.20.1.
+- Git.
+- Node.js 20 or later only when building the documentation website.
 
- - You're now ready to start developing CC: Rewired. Running `./gradlew :forge:runClient` or
-   `./gradle :fabric:runClient` will start Minecraft under Forge and Fabric respectively.
+Clone the repository:
 
-If you want to run CC:T in a normal Minecraft instance, run `./gradlew assemble` and copy the `.jar` from
-`projects/forge/build/libs` (for Forge) or `projects/fabric/build/libs` (for Fabric).
+```shell
+git clone https://github.com/Vynzaro/CC-Rewired.git
+cd CC-Rewired
+```
 
-## Developing CC: Rewired
-Before making any major changes to CC: Rewired, I'd recommend starting opening an issue or starting a discussion on
-GitHub first. It's often helpful to discuss features before spending time developing them!
+Build and test on Linux or macOS:
 
-Once you're ready to start programming, have a read of the [the architecture document][architecture] first. While it's
-not a comprehensive document, it gives a good hint of where you should start looking to make your changes. As always, if
-you're not sure, [do ask the community][community]!
+```shell
+./gradlew assemble
+./gradlew check
+./gradlew :forge:runClient
+```
 
-Generative AI contributions are *not* welcome. PRs containing, or suspected of containing, code output by a generative
-AI model will be immediately rejected.
+On Windows PowerShell:
 
-### Testing
-When making larger changes, it may be useful to write a test to make sure your code works as expected.
+```powershell
+.\gradlew.bat assemble
+.\gradlew.bat check
+.\gradlew.bat :forge:runClient
+```
 
-CC: Rewired has several test suites, each designed to test something different:
+The Forge JAR is written to `projects/forge/build/libs/`. Do not install CC: Rewired together with CC: Tweaked: both use
+the `computercraft` compatibility ID.
 
- - In order to test CraftOS and its builtin APIs, we have a test suite written in Lua located at
-   `projects/core/src/test/resources/test-rom/`. These don't rely on any Minecraft code, which means they can run on
-   emulators, acting as a sort of compliance test.
+## Project scope
 
-   These tests are written using a test system called "mcfly", heavily inspired by [busted]. Groups of tests go inside
-   `describe` blocks, and a single test goes inside `it`. Assertions are generally written using `expect` (inspired by
-   Hamcrest and the like). For instance, `expect(foo):eq("bar")` asserts that your variable `foo` is equal to the
-   expected value `"bar"`.
+Forge 1.20.1 is the primary target for the first release line. The inherited Fabric modules should continue compiling,
+but new features do not need a simultaneous Fabric implementation unless the relevant issue explicitly requires it.
 
-   These tests can be run with `./gradlew :core:test`.
+Read [the architecture document] before modifying shared code. Do not rename the `computercraft` mod ID, resource
+namespace, Lua APIs or `dan200.computercraft` packages as part of an unrelated change.
 
- - In-game functionality, such as the behaviour of blocks and items, is tested using [Minecraft's gametest
-   system][mc-test] (`projects/common/src/testMod`). These tests spin up a server, spawn a structure for each test, and
-   then run some code on the blocks defined in that structure.
+## Tests
 
-   These tests can be run with `./gradlew runGametest` (or `./gradle :forge:runGametest`/`./gradlew :fabric:runGametest`
-   for a single loader).
+- Core and CraftOS tests: `./gradlew :core:test`
+- General checks: `./gradlew check`
+- Forge game tests: `./gradlew :forge:runGametest`
+- Data generation after model, recipe or language-provider changes: `./gradlew runData`
 
-For more information, [see the architecture document][architecture].
+Visual changes should include clear before-and-after screenshots. Compatibility changes should state their effect on old
+worlds, Lua programs and addon mods.
 
-## Writing documentation
-When writing documentation for [CC: Rewired's documentation website][docs], it may be useful to build the documentation
-and preview it yourself before submitting a PR.
+## Documentation
 
-You'll first need to [set up a development environment as above](#setting-up-a-development-environment).
+Build the documentation with:
 
-Once this is set up, you can now run `./gradlew docWebsite`. This generates documentation from our Lua and Java code,
-writing the resulting HTML into `./projects/web/build/site`, which can then be opened in a browser. When iterating on
-documentation, you can instead run `./gradlew :web:assemble -x :web:compileTeaVM -t`, which will rebuild documentation
-every time you change a file.
+```shell
+./gradlew docWebsite
+```
 
-Documentation is built using [illuaminate] which, while not currently documented (somewhat ironic), is largely the same
-as [ldoc][ldoc]. Documentation comments are written in Markdown, though note that we do not support many GitHub-specific
-markdown features. If you can, do check what the documentation looks like locally!
+The generated site is written to `projects/web/build/site/`. Documentation uses [illuaminate] and Markdown.
 
-When writing long-form documentation (such as the guides in [doc/guides](doc/guides)), I find it useful to tell a
-narrative. Think of what you want the user to learn or achieve, then start introducing a simple concept, and then talk
-about how you can build on that until you've covered everything!
+## AI-assisted contributions
 
-[new-issue]: https://github.com/cc-Rewired/CC-Rewired/issues/new/choose "Create a new issue"
-[community]: README.md#community "Get in touch with the community."
-[Adoptium]: https://adoptium.net/temurin/releases?version=25 "Download OpenJDK 25"
-[illuaminate]: https://github.com/SquidDev/illuaminate/ "Illuaminate on GitHub"
-[docs]: https://Rewired.cc/ "CC: Rewired documentation"
-[ldoc]: http://stevedonovan.github.io/ldoc/ "ldoc, a Lua documentation generator."
-[mc-test]: https://www.youtube.com/watch?v=vXaWOJTCYNg
-[busted]: https://github.com/Olivine-Labs/busted "busted: Elegant Lua unit testing."
-[node]: https://nodejs.org/en/ "Node.js"
-[architecture]: projects/ARCHITECTURE.md
-[Crowdin]: https://crowdin.com/project/cc-Rewired/
+AI-assisted work is permitted, but the contributor remains fully responsible for every submitted line. Pull requests
+must disclose substantial generative-AI use and must be manually reviewed, tested and checked for licensing or provenance
+problems. Unverified bulk-generated code will be rejected.
+
+## Licensing
+
+Preserve every inherited SPDX copyright and license line. Add new copyright notices only for original contributions.
+Binary assets need appropriate `.license` sidecars or `REUSE.toml` annotations. See [LICENSING.md].
+
+[issue templates]: https://github.com/Vynzaro/CC-Rewired/issues/new/choose
+[the architecture document]: projects/ARCHITECTURE.md
+[illuaminate]: https://github.com/SquidDev/illuaminate/
+[LICENSING.md]: LICENSING.md

@@ -1,16 +1,21 @@
 <!--
 SPDX-FileCopyrightText: 2022 The CC: Tweaked Developers
+SPDX-FileCopyrightText: 2026 Vynzaro
 
 SPDX-License-Identifier: MPL-2.0
 -->
 
 # Architecture
-CC: Tweaked has a rather complex project layout, as there's several use-cases we want to support (multiple mod loaders,
+CC: Rewired inherits a complex project layout from CC: Tweaked, as there are several use-cases to support (multiple mod loaders,
 usable outside of Minecraft). As such, it can be tricky to understand how the code is structured and how the various
 sub-projects interact. This document provides a high-level overview of the entire mod.
 
+The public product name is CC: Rewired. The `computercraft` mod ID and resource namespace, the
+`dan200.computercraft` Java packages and the internal `cc-tweaked.*` Gradle plugin IDs are retained deliberately for
+compatibility and build stability. Do not treat those internal names as stale branding to replace mechanically.
+
 ## Project Outline
-CC: Tweaked is split into 4 primary modules (`core`, `common`, `fabric`, `forge`). These themselves are then split into
+CC: Rewired is split into 4 primary modules (`core`, `common`, `fabric`, `forge`). These themselves are then split into
 a public API (i.e `core-api`) and the actual implementation (i.e. `core`).
 
  - `core`: This contains the core "computer" part of ComputerCraft, such as the Lua VM, filesystem and builtin APIs.
@@ -65,7 +70,7 @@ mentioning:
  - `standalone`: This contains a standalone UI for computers, allowing debugging and development of CraftOS without
    launching Minecraft.
 
- - `web`: This contains the additional tooling for building [the documentation website][tweaked.cc], such as support for
+ - `web`: This contains the additional tooling for building the CC: Rewired documentation website, such as support for
    rendering recipes
 
  - `buildSrc` (in the base directory, not in `projects/`): This contains any build logic shared between modules. For
@@ -83,7 +88,7 @@ mentioning:
 > why our Gradle scripts are slightly odd!
 
 ## Testing
-CC: Tweaked has a small (though growing!) test suite to ensure various features behave correctly. Most tests are written
+CC: Rewired has a test suite inherited from CC: Tweaked to ensure various features behave correctly. Most tests are written
 in Java using [JUnit], though we also make use of [jqwik] for property testing.
 
 ### Test Fixtures
@@ -120,7 +125,7 @@ class ArrayListTest implements ListContract<ArrayList<Integer>> {
 This is especially useful when testing `PlatformHelper` and other mod loader abstractions.
 
 ### Lua tests
-While the majority of CC: Tweaked is written in Java, a significant portion of the code is written in Lua. As such, it's
+While the majority of CC: Rewired is written in Java, a significant portion of the code is written in Lua. As such, it's
 also useful to test that.
 
 This is done by starting a Lua VM with all of ComputerCraft's APIs loaded, then starting a custom test framework
@@ -131,7 +136,7 @@ tooling (for instance, XML test reports and IDE integration).
 There's a slightly more detailed description of the process at `ComputerTestDelegate.java`.
 
 ### Game tests
-CC: Tweaked also runs several tests in-game using Minecraft's [gametest framework][mc-test]. These work by starting
+CC: Rewired also runs several tests in-game using Minecraft's [gametest framework][mc-test]. These work by starting
 a Minecraft server and then, for each test, spawning a structure and then interacting with the blocks inside the
 structure, asserting they behave as expected.
 
@@ -159,7 +164,6 @@ Lua. It also ends up being much more efficient, which is important when running 
 [MultiLoader-Template]: https://github.com/jaredlll08/MultiLoader-Template/ "MultiLoader-Template - A template for a Forge + Fabric project setup using a Common source set."
 [ServiceLoader]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ServiceLoader.html "ServiceLoader (Java SE 17 and JDK 17)"
 [ErrorProne]: https://errorprone.info/ "ErrorProne"
-[tweaked.cc]: https://tweaked.cc "CC: Tweaked"
 [JUnit]: https://junit.org/junit5/ "JUnit 5"
 [jqwik]: https://jqwik.net/
 [Hamcrest]: https://hamcrest.org/JavaHamcrest/ "Java Hamcrest"

@@ -36,7 +36,7 @@ def write_images(io: TextIO, images: list[Image]):
             <head>
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>CC:T test screenshots</title>
+                <title>CC: Rewired test screenshots</title>
                 <style>
                 body {
                     padding: 0;

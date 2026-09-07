@@ -11,9 +11,9 @@ SPDX-License-Identifier: MPL-2.0
 -->
 
 # Playing audio with speakers
-CC: Tweaked's speaker peripheral provides a powerful way to play any audio you like with the [`speaker.playAudio`]
+CC: Rewired's speaker peripheral provides a powerful way to play any audio you like with the [`speaker.playAudio`]
 method. However, for people unfamiliar with digital audio, it's not the most intuitive thing to use. This guide provides
-an introduction to digital audio, demonstrates how to play music with CC: Tweaked's speakers, and then briefly discusses
+an introduction to digital audio, demonstrates how to play music with CC: Rewired's speakers, and then briefly discusses
 the more complex topic of audio processing.
 
 ## A short introduction to digital audio
@@ -27,7 +27,7 @@ Modulation][PCM] (PCM). PCM can be thought of as the "standard" audio format, as
 instance, to mix two pieces of audio together, you can just add samples from the two tracks together and take the
 average.
 
-CC: Tweaked's speakers also work with PCM audio. It plays back 48,000 samples a second, where each sample is an integer
+CC: Rewired's speakers also work with PCM audio. It plays back 48,000 samples a second, where each sample is an integer
 between -128 and 127. This is more commonly referred to as 48kHz and an 8-bit resolution.
 
 Let's now look at a quick example. We're going to generate a [Sine Wave] at 220Hz, which sounds like a low monotonous
@@ -102,11 +102,11 @@ Instead, we store audio in special formats (or *codecs*) and then convert them t
 them.
 
 Modern audio codecs use some incredibly impressive techniques to compress the audio as much as possible while preserving
-sound quality. However, due to CC: Tweaked's limited processing power, it's not really possible to use these from your
+sound quality. However, due to CC: Rewired's limited processing power, it's not really possible to use these from your
 computer. Instead, we need something much simpler.
 
 DFPWM (Dynamic Filter Pulse Width Modulation) is the de facto standard audio format of the ComputerCraft (and
-OpenComputers) world. Originally popularised by the add-on mod [Computronics], CC:T now has built-in support for it with
+OpenComputers) world. Originally popularised by the add-on mod [Computronics], CC: Rewired inherits built-in support for it with
 the [`cc.audio.dfpwm`] module. This allows you to read DFPWM files from disk, decode them to PCM, and then play them
 using the speaker.
 

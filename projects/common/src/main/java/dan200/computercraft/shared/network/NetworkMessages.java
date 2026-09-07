@@ -16,7 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.*;
 
 /**
- * List of all {@link MessageType}s provided by CC: Tweaked.
+ * List of all {@link MessageType}s provided by CC: Rewired.
  *
  * @see PlatformHelper The platform helper is used to send packets.
  */

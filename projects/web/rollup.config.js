@@ -48,7 +48,7 @@ const compileCss = (filename, input, minify) => {
 }
 
 /**
- * Custom plugin for CC: Tweaked specific build logic.
+ * Custom plugin for CC: Rewired-specific build logic.
  *
  * This handles:
  *  - Minifying JS using swc, which is faster than using terser.

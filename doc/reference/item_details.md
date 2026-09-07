@@ -13,8 +13,8 @@ SPDX-License-Identifier: MPL-2.0
 -->
 
 # Item details
-Several functions in CC: Tweaked, such as [`turtle.getItemDetail`] and [`inventory.getItemDetail`] provide a way to get
-information about an item stack. This page details information about items that CC: Tweaked may return.
+Several functions in CC: Rewired, such as [`turtle.getItemDetail`] and [`inventory.getItemDetail`] provide a way to get
+information about an item stack. This page details information about items that CC: Rewired may return.
 
 Some methods (such as [`inventory.list`] and [`turtle.getItemDetail`] without the `detailed` flag), will only return
 the "Basic information" about the item.

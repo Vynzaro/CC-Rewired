@@ -9,7 +9,7 @@ SPDX-License-Identifier: MPL-2.0
 -->
 
 # The `/computercraft` command
-CC: Tweaked provides a `/computercraft` command for server owners to manage running computers on a server.
+CC: Rewired provides a `/computercraft` command for server owners to manage running computers on a server.
 
 ## Permissions {#permissions}
 As the `/computercraft` command is mostly intended for debugging and administrative purposes, its sub-commands typically

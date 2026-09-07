@@ -1,35 +1,59 @@
+# SPDX-FileCopyrightText: 2026 Vynzaro
+#
+# SPDX-License-Identifier: CC0-1.0
+
 name: Bug report
-description: Report some misbehaviour in the mod
-labels: [ bug ]
+description: "Report reproducible incorrect behaviour in CC: Rewired"
+labels: [bug]
 type: bug
 body:
+- type: markdown
+  attributes:
+    value: |
+      Search existing issues first. CC: Rewired is an alpha project; reports still need complete reproduction details.
 - type: dropdown
   id: mc-version
   attributes:
-    label: Minecraft Version
-    description: |
-        What version of Minecraft are you using? If your version is not listed, please try to reproduce on one of the supported versions.
+    label: Minecraft version
     options:
-      - "1.20.1"
-      - "1.21.1"
-      - "26.2"
+    - "1.20.1"
+  validations:
+    required: true
+- type: dropdown
+  id: loader
+  attributes:
+    label: Mod loader
+    options:
+    - "Forge 47.x"
+    - "Fabric (inherited build; limited support)"
   validations:
     required: true
 - type: input
   id: version
   attributes:
-    label: Version
-    description: "What version of CC: Tweaked are you using?"
-    placeholder: "e.g. 1.96.0"
+    label: "CC: Rewired version"
+    description: Use the version shown in the Mods screen or the complete development JAR filename.
+    placeholder: "0.1.0-alpha.1 or commit SHA"
   validations:
     required: true
 - type: textarea
   id: details
   attributes:
-    label: Details
-    description: |
-      Description of the bug. Please include the following:
-      - Logs: These will be located in the `logs/` directory of your Minecraft instance. This is always useful, even if it doesn't include errors, so please upload this!
-      - Detailed reproduction steps: sometimes I can spot a bug pretty easily, but often it's much more obscure. The more information I have to help reproduce it, the quicker it'll get fixed.
-
-      ![A gif of burning text reading "Upload your logs!!!"](https://tweaked.cc/images/logs.gif)
+    label: Description and reproduction steps
+    description: Explain what happened, what you expected and the smallest reliable way to reproduce it.
+  validations:
+    required: true
+- type: textarea
+  id: logs
+  attributes:
+    label: Logs and crash reports
+    description: Upload the relevant files from the instance's logs or crash-reports directory. Do not paste enormous logs inline.
+  validations:
+    required: true
+- type: textarea
+  id: mods
+  attributes:
+    label: Other installed mods
+    description: "Attach a mod list or state that CC: Rewired was tested alone."
+  validations:
+    required: true

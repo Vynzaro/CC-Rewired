@@ -10,8 +10,8 @@ SPDX-License-Identifier: MPL-2.0
 -->
 
 # Entity details
-Some functions in CC: Tweaked (such as [`commands.getEntities`]) provide a way to get information about an entity.
-This page details information about entities that CC: Tweaked may return.
+Some functions in CC: Rewired (such as [`commands.getEntities`]) provide a way to get information about an entity.
+This page details information about entities that CC: Rewired may return.
 
 ## Basic information
 Entity information will *always* contain:

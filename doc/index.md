@@ -1,5 +1,6 @@
 <!--
 SPDX-FileCopyrightText: 2020 The CC: Tweaked Developers
+SPDX-FileCopyrightText: 2026 Vynzaro
 
 SPDX-License-Identifier: MPL-2.0
 -->
@@ -8,65 +9,67 @@ SPDX-License-Identifier: MPL-2.0
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="logo-darkmode.png">
         <source media="(prefers-color-scheme: light)" srcset="logo.png">
-        <img alt="CC: Tweaked" src="logo.png">
+        <img alt="CC: Rewired" src="logo.png">
     </picture>
 </h1>
 
-CC: Tweaked is a mod for Minecraft which adds programmable computers, turtles and more to the game. A fork of the
-much-beloved [ComputerCraft], it continues its legacy with improved performance and stability, along with a wealth of
-new features.
+CC: Rewired is an independent fork of [CC: Tweaked], itself based on the original [ComputerCraft]. It provides
+programmable computers, turtles and peripherals powered by Lua, while developing a modern visual and interaction model
+for current Minecraft.
 
-CC: Tweaked can be installed from [Modrinth]. It runs on both [Minecraft Forge] and [Fabric].
+> [!WARNING]
+> CC: Rewired is in early alpha development. The current release line establishes the project's identity and visual
+> foundation; many planned modern systems are not implemented yet.
 
-## Features
-Controlled using the [Lua programming language][lua], CC: Tweaked's computers provides all the tools you need to start
-writing code and automating your Minecraft world.
+## Current platform
 
-<img alt="A ComputerCraft terminal open and ready to be programmed." src="images/basic-terminal.png" class="big-image" />
+The first supported target is **Minecraft 1.20.1 with Forge 47**. The inherited Fabric module remains available for
+compatibility testing but is not the primary target for the first releases.
 
-While computers are incredibly powerful, they're rather limited by their inability to move about. *Turtles* are the
-solution here. They can move about the world, placing and breaking blocks, swinging a sword to protect you from zombies,
-or whatever else you program them to!
+Published builds are available from [Modrinth] and [CurseForge]. Development builds are produced by [GitHub Actions].
 
-<img alt="A turtle tunneling in Minecraft." src="images/turtle.png" class="big-image" />
+## What works today
 
-Not all problems can be solved with a pickaxe though, and so CC: Tweaked also provides a bunch of additional peripherals
-for your computers. You can play a tune with speakers, display text or images on a monitor, connect all your
-computers together with modems, and much more.
+CC: Rewired retains the proven ComputerCraft feature set inherited from CC: Tweaked:
 
-Computers can now also interact with inventories such as chests, allowing you to build complex inventory and item
-management systems.
+- Computers and pocket computers programmable in Lua.
+- Turtles capable of mining, crafting and world automation.
+- Monitors, printers, speakers, disk drives and wired or wireless modems.
+- Peripheral access to inventories and compatible modded blocks.
+- HTTP, WebSocket, filesystem, shell and networking APIs.
 
-<img alt="A chest's contents being read by a computer and displayed on a monitor." src="images/peripherals.png" class="big-image" />
+## Direction
 
-## Getting Started
-While ComputerCraft is lovely for both experienced programmers and for people who have never coded before, it can be a
-little daunting getting started. Thankfully, there's several fantastic tutorials out there:
+The project will modernise these systems in controlled stages: interface and block presentation first, followed by a
+new user experience and, after separate design work, modern networking, power and peripheral infrastructure. Planned
+features are not advertised as released features until they exist in a tested build.
 
- - [Direwolf20's ComputerCraft tutorials](https://www.youtube.com/watch?v=wrUHUhfCY5A "ComputerCraft Tutorial Episode 1 - HELP! and Hello World")
- - [Sethbling's ComputerCraft series](https://www.youtube.com/watch?v=DSsx4VSe-Uk "Programming Tutorial with Minecraft Turtles -- Ep. 1: Intro to Turtles and If-Then-Else_End")
- - [Lyqyd's Computer Basics 1](https://ccf.squiddev.cc/forums2/index.php?/topic/15033-computer-basics-i/ "Computer Basics I")
+## Compatibility
 
-Once you're a little more familiar with the mod, the sidebar and links below provide more detailed documentation on the
-various APIs and peripherals provided by the mod.
+CC: Rewired keeps the `computercraft` mod ID, resource namespace, Java API packages and Lua APIs. Existing worlds,
+programs and addon mods should therefore remain compatible wherever the fork has not documented a deliberate change.
+CC: Rewired and CC: Tweaked cannot be installed together.
 
-<h2 id="community">Community</h2>
-If you need help getting started with CC: Tweaked, want to show off your latest project, or just want to chat about
-ComputerCraft, do check out our [GitHub discussions page][GitHub discussions]! There's also a fairly populated,
-albeit quiet IRC channel on [EsperNet], if that's more your cup of tea. You can join `#computercraft` through your
-desktop client, or online using [KiwiIRC].
+## Getting started
 
-## Get Involved
-CC: Tweaked lives on [GitHub]. If you've got any ideas, feedback or bugs please do [create an issue][bug].
+The API reference in this site documents the code included in the current build. Existing ComputerCraft and CC: Tweaked
+tutorials remain useful because the first CC: Rewired versions preserve their programming model.
 
-[github]: https://github.com/cc-tweaked/CC-Tweaked/ "CC: Tweaked on GitHub"
-[bug]: https://github.com/cc-tweaked/CC-Tweaked/issues/new/choose
-[computercraft]: https://github.com/dan200/ComputerCraft "ComputerCraft on GitHub"
-[modrinth]: https://modrinth.com/mod/gu7yAYhd "Download CC: Tweaked from Modrinth"
-[forge]: https://files.minecraftforge.net/ "Download Minecraft Forge."
-[Minecraft Forge]: https://files.minecraftforge.net/ "Download Minecraft Forge."
-[Fabric]: https://fabricmc.net/use/installer/ "Download Fabric."
-[lua]: https://www.lua.org/ "Lua's main website"
-[GitHub Discussions]: https://github.com/cc-tweaked/CC-Tweaked/discussions
-[EsperNet]: https://www.esper.net/
-[KiwiIRC]: https://kiwiirc.com/nextclient/#irc://irc.esper.net:+6697/#computercraft "#computercraft on EsperNet"
+## Project and support
+
+- [Source code]
+- [Issue tracker]
+- [Contributing guide]
+- [Licensing and attribution]
+
+CC: Rewired is maintained by Vynzaro and is not affiliated with or endorsed by the CC: Tweaked developers.
+
+[CC: Tweaked]: https://github.com/cc-tweaked/CC-Tweaked
+[ComputerCraft]: https://github.com/dan200/ComputerCraft
+[Modrinth]: https://modrinth.com/project/cc-rewired
+[CurseForge]: https://www.curseforge.com/minecraft/mc-mods/cc-rewired
+[GitHub Actions]: https://github.com/Vynzaro/CC-Rewired/actions
+[Source code]: https://github.com/Vynzaro/CC-Rewired
+[Issue tracker]: https://github.com/Vynzaro/CC-Rewired/issues
+[Contributing guide]: https://github.com/Vynzaro/CC-Rewired/blob/mb-1.20.x/CONTRIBUTING.md
+[Licensing and attribution]: https://github.com/Vynzaro/CC-Rewired/blob/mb-1.20.x/LICENSING.md

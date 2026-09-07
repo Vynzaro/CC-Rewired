@@ -1,5 +1,6 @@
+# SPDX-FileCopyrightText: 2022 The CC: Tweaked Developers
+# SPDX-FileCopyrightText: 2026 Vynzaro
+#
+# SPDX-License-Identifier: CC0-1.0
+
 blank_issues_enabled: false
-contact_links:
-- name: GitHub Discussions
-  url: https://github.com/cc-tweaked/CC-Tweaked/discussions
-  about: Ask questions on GitHub Discussions.

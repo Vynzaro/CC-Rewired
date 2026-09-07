@@ -12,8 +12,8 @@ SPDX-License-Identifier: MPL-2.0
 -->
 
 # Block details
-Several functions in CC: Tweaked, such as [`turtle.inspect`] and [`commands.getBlockInfo`] provide a way to get
-information about a block in the world. This page details information about blocks that CC: Tweaked may return.
+Several functions in CC: Rewired, such as [`turtle.inspect`] and [`commands.getBlockInfo`] provide a way to get
+information about a block in the world. This page details information about blocks that CC: Rewired may return.
 
 ## Basic information
 Block information will *always* contain:

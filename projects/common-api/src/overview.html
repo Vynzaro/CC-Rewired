@@ -1,5 +1,6 @@
 <!--
 SPDX-FileCopyrightText: 2025 The CC: Tweaked Developers
+SPDX-FileCopyrightText: 2026 Vynzaro
 
 SPDX-License-Identifier: MPL-2.0
 -->
@@ -8,62 +9,48 @@ SPDX-License-Identifier: MPL-2.0
 <html lang="en">
 <body>
 <p>
-    This is the documentation for CC: Tweaked $modVersion for Minecraft $mcVersion. Documentation for other versions of
-    Minecraft are available on the CC: Tweaked website:
-
-<ul>
-    <li><a href="/mc-1.20.x/javadoc/">Minecraft 1.20.1</a>
-    <li><a href="/mc-1.21.x/javadoc/">Minecraft 1.21.1</a>
-    <li><a href="/mc-26.2/javadoc/">Minecraft 26.2</a>
-</ul>
+    This is the API documentation for CC: Rewired $modVersion on Minecraft $mcVersion. CC: Rewired retains the
+    established <code>dan200.computercraft.api</code> packages so existing CC: Tweaked addons can remain compatible.
+</p>
 
 <h1>Quick links</h1>
-<p>
-    You probably want to start in the following places:
+<p>Start with the following APIs:</p>
 
 <ul>
     <li>{@linkplain dan200.computercraft.api.peripheral Registering new peripherals}</li>
     <li>
         {@link dan200.computercraft.api.lua.LuaFunction} and {@link dan200.computercraft.api.lua.IArguments} for
-        adding methods to your peripheral or Lua objects.
+        adding methods to peripherals or Lua objects.
     </li>
     <li>{@linkplain dan200.computercraft.api.turtle.ITurtleUpgrade Turtle upgrades}</li>
     <li>{@linkplain dan200.computercraft.api.pocket.IPocketUpgrade Pocket upgrades}</li>
 </ul>
 
-<h1>Using</h1>
+<h1>Using development artifacts</h1>
 <p>
-    CC: Tweaked is hosted on my maven repo, and so is relatively simple to depend on. You may wish to add a soft (or
-    hard) dependency in your <code>mods.toml</code> file, with the appropriate version bounds, to ensure that API
-    functionality you depend on is present.
+    CC: Rewired does not currently operate a public Maven repository. Run <code>publishToMavenLocal</code> in a local
+    checkout, and then depend on the required API artifact from <code>mavenLocal()</code>:
+</p>
 
 <pre class="language language-groovy"><code>repositories {
-    maven {
-        url "https://maven.squiddev.cc"
-        content { includeGroup("cc.tweaked") }
-    }
+    mavenLocal()
 }
 
 dependencies {
-    // Vanilla (i.e. for multi-loader systems)
-    compileOnly("cc.tweaked:cc-tweaked-$mcVersion-common-api:$modVersion")
+    // Common API for multi-loader projects.
+    compileOnly("io.github.vynzaro:cc-rewired-$mcVersion-common-api:$modVersion")
 
-    // Forge Gradle
-    compileOnly("cc.tweaked:cc-tweaked-$mcVersion-core-api:$modVersion")
-    compileOnly(fg.deobf("cc.tweaked:cc-tweaked-$mcVersion-forge-api:$modVersion"))
-    runtimeOnly(fg.deobf("cc.tweaked:cc-tweaked-$mcVersion-forge:$modVersion"))
-
-    // Fabric Loom
-    modCompileOnly("cc.tweaked:cc-tweaked-$mcVersion-fabric-api:$modVersion")
-    modRuntimeOnly("cc.tweaked:cc-tweaked-$mcVersion-fabric:$modVersion")
+    // Forge API and development runtime.
+    compileOnly("io.github.vynzaro:cc-rewired-$mcVersion-core-api:$modVersion")
+    compileOnly(fg.deobf("io.github.vynzaro:cc-rewired-$mcVersion-forge-api:$modVersion"))
+    runtimeOnly(fg.deobf("io.github.vynzaro:cc-rewired-$mcVersion-forge:$modVersion"))
 }
 </code></pre>
 
 <p>
-    You should also be careful to only use classes within the <code>dan200.computercraft.api</code> package. Non-API
-    classes are subject to change at any point. If you depend on functionality outside the API (or need to mixin to
-    CC:T), please <a href="https://github.com/cc-tweaked/CC-Tweaked/discussions/new/choose">start a discussion</a> to
-    let me know!
-
+    Only use classes inside <code>dan200.computercraft.api</code>. Other inherited implementation packages are not
+    public API and may change without notice. Propose missing integration hooks in the
+    <a href="https://github.com/Vynzaro/CC-Rewired/issues">CC: Rewired issue tracker</a>.
+</p>
 </body>
 </html>

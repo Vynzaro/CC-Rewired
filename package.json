@@ -1,9 +1,10 @@
 {
-  "name": "tweaked.cc",
-  "version": "1.0.0",
-  "description": "Website additions for tweaked.cc",
-  "author": "SquidDev",
-  "license": "BSD-3-Clause",
+  "name": "cc-rewired-docs",
+  "version": "0.1.0",
+  "description": "Documentation website tooling for CC: Rewired",
+  "author": "Vynzaro and CC: Rewired contributors",
+  "license": "MPL-2.0",
+  "private": true,
   "type": "module",
   "dependencies": {
     "@squid-dev/cc-web-term": "^2.0.0",

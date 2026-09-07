@@ -15,7 +15,7 @@ import static org.objectweb.asm.Opcodes.*;
 /**
  * Patch Cobalt's {@code LuaState} and CC's {@code CobaltLuaMachine} to self-interrupt.
  * <p>
- * In normal CC:T, computers are paused/interrupted asynchronously from the {@code ComputerThread}. However, as
+ * In normal CC: Rewired, computers are paused/interrupted asynchronously from the {@code ComputerThread}. However, as
  * Javascript doesn't (easily) support multi-threaded code, we must find another option.
  * <p>
  * Instead, we patch {@code LuaState.isInterrupted()} to periodically return true (every 1024 instructions), and then

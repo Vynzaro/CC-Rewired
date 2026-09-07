@@ -38,7 +38,7 @@ import java.util.Set;
  * - Receiving messages is done by listening to the [`modem_message`] event.
  * <p>
  * ## Types of modem
- * CC: Tweaked comes with three kinds of modem, with different capabilities.
+ * CC: Rewired comes with three kinds of modem, with different capabilities.
  *
  * <ul>
  * <li><strong>Wireless modems:</strong> Wireless modems can send messages to any other wireless modem. They can be placed next to a
