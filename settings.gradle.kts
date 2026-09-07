@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2022 The CC: Tweaked Developers
+// SPDX-FileCopyrightText: 2026 Vynzaro
 //
 // SPDX-License-Identifier: MPL-2.0
 
@@ -20,7 +21,7 @@ pluginManagement {
         maven("https://maven.squiddev.cc") {
             name = "SquidDev"
             content {
-                includeGroup("cc.tweaked.vanilla-extract")
+                includeGroup("cc.rewired.vanilla-extract")
             }
         }
     }
