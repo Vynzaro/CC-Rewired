@@ -1,11 +1,12 @@
 # SPDX-FileCopyrightText: 2017 The CC: Tweaked Developers
+# SPDX-FileCopyrightText: 2026 Vynzaro
 #
 # SPDX-License-Identifier: MPL-2.0
 
 version = 1
-SPDX-PackageName = "CC: Tweaked"
-SPDX-PackageSupplier = "Jonathan Coates <git@squiddev.cc>"
-SPDX-PackageDownloadLocation = "https://github.com/cc-tweaked/cc-tweaked"
+SPDX-PackageName = "CC: Rewired"
+SPDX-PackageSupplier = "Person: Vynzaro"
+SPDX-PackageDownloadLocation = "https://github.com/Vynzaro/CC-Rewired"
 
 [[annotations]]
 SPDX-FileCopyrightText = "The CC: Tweaked Developers"

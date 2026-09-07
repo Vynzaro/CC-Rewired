@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2022 The CC: Tweaked Developers
+// SPDX-FileCopyrightText: 2026 Vynzaro
 //
 // SPDX-License-Identifier: MPL-2.0
 
@@ -25,9 +26,9 @@ val modVersion = extra["modVersion"] as String
 
 val libs = project.extensions.getByType<VersionCatalogsExtension>().named("libs")
 
-group = "cc.tweaked"
+group = "io.github.vynzaro"
 version = modVersion
-base.archivesName.set("cc-tweaked-${libs.findVersion("minecraft").get()}-${project.name}")
+base.archivesName.set("cc-rewired-${libs.findVersion("minecraft").get()}-${project.name}")
 
 java {
     toolchain { languageVersion = CCTweakedPlugin.JDK_VERSION }
@@ -145,12 +146,12 @@ tasks.withType(AbstractArchiveTask::class.java).configureEach {
 tasks.jar {
     manifest {
         attributes(
-            "Specification-Title" to "computercraft",
-            "Specification-Vendor" to "SquidDev",
+            "Specification-Title" to "CC: Rewired",
+            "Specification-Vendor" to "Vynzaro and CC: Rewired contributors",
             "Specification-Version" to "1",
-            "Implementation-Title" to "cctweaked-${project.name}",
+            "Implementation-Title" to "cc-rewired-${project.name}",
             "Implementation-Version" to modVersion,
-            "Implementation-Vendor" to "SquidDev",
+            "Implementation-Vendor" to "Vynzaro",
         )
     }
 }

@@ -20,7 +20,7 @@ jobs:
     - name: 📥 Setup Gradle
       uses: gradle/actions/setup-gradle@v6
       with:
-        cache-read-only: ${{ !startsWith(github.ref, 'refs/heads/mc-') }}
+        cache-read-only: ${{ github.event_name == 'pull_request' }}
 
     - name: ⚒️ Build
       run: ./gradlew assemble
@@ -29,12 +29,12 @@ jobs:
       run: |
         # Find the main jar and append the git hash onto it.
         mkdir -p jars
-        find projects/forge/build/libs projects/fabric/build/libs -type f -regex '.*[0-9.]+\(-SNAPSHOT\)?\.jar$' -exec bash -c 'cp {} "jars/$(basename {} .jar)-$(git rev-parse HEAD).jar"' \;
+        find projects/forge/build/libs projects/fabric/build/libs -maxdepth 1 -type f -name 'cc-rewired-*.jar' ! -name '*-sources.jar' ! -name '*-javadoc.jar' ! -name '*-dev.jar' -exec bash -c 'cp {} "jars/$(basename {} .jar)-$(git rev-parse --short HEAD).jar"' \;
 
     - name: 📤 Upload Jar
       uses: actions/upload-artifact@v7
       with:
-        name: CC-Tweaked
+        name: CC-Rewired
         path: ./jars
 
     - name: Cache pre-commit
@@ -86,7 +86,7 @@ jobs:
     - name: 📥 Setup Gradle
       uses: gradle/actions/setup-gradle@v6
       with:
-        cache-read-only: ${{ !startsWith(github.ref, 'refs/heads/mc-') }}
+        cache-read-only: ${{ github.event_name == 'pull_request' }}
 
     - name: ⚒️ Build
       run: |

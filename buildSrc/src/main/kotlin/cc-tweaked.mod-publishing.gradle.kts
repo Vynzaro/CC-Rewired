@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2023 The CC: Tweaked Developers
+// SPDX-FileCopyrightText: 2026 Vynzaro
 //
 // SPDX-License-Identifier: MPL-2.0
 
@@ -26,13 +27,13 @@ val mcVersion = project.extensions.getByType<VersionCatalogsExtension>().named("
 
 modrinth {
     token = findProperty("modrinthApiKey") as String? ?: ""
-    projectId = "gu7yAYhd"
+    projectId = "cc-rewired"
     versionNumber = modVersion
     versionName = modVersion
     versionType = if (isUnstable) "alpha" else "release"
     uploadFile.setProvider(modPublishing.output)
     gameVersions.add(mcVersion)
-    changelog = "Release notes can be found on the [GitHub repository](https://github.com/cc-tweaked/CC-Tweaked/releases/tag/v$mcVersion-$modVersion)."
+    changelog = "Release notes can be found on the [GitHub repository](https://github.com/Vynzaro/CC-Rewired/releases/tag/v$mcVersion-$modVersion)."
 
     syncBodyFrom = provider { rootProject.file("doc/mod-page.md").readText() }
 }

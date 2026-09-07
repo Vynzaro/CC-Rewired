@@ -1,23 +1,24 @@
 # SPDX-FileCopyrightText: 2021 The CC: Tweaked Developers
+# SPDX-FileCopyrightText: 2026 Vynzaro
 #
 # SPDX-License-Identifier: MPL-2.0
 
 modLoader="javafml"
 loaderVersion="[30,)"
 
-issueTrackerURL="https://github.com/cc-tweaked/CC-Tweaked/issues"
-displayURL="https://github.com/cc-tweaked/CC-Tweaked"
+issueTrackerURL="https://github.com/Vynzaro/CC-Rewired/issues"
+displayURL="https://github.com/Vynzaro/CC-Rewired"
 
 credits="Created by Daniel Ratcliffe (@DanTwoHundred)"
-authors="Daniel Ratcliffe, Aaron Mills, SquidDev"
-license="ComputerCraft Public License (https://raw.githubusercontent.com/dan200/ComputerCraft/master/LICENSE)"
+authors="Vynzaro and CC: Rewired contributors"
+license="ComputerCraft Public License 1.0 and other file-level licenses"
 
 [[mods]]
 modId="cctest"
 version="1.0.0"
-displayName="CC: Tweaked test framework"
+displayName="CC: Rewired test framework"
 description='''
-A test framework for ensuring CC: Tweaked works correctly.
+A test framework for ensuring CC: Rewired works correctly.
 '''
 
 [[dependencies.cctest]]

@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2022 The CC: Tweaked Developers
+// SPDX-FileCopyrightText: 2026 Vynzaro
 //
 // SPDX-License-Identifier: MPL-2.0
 
@@ -40,7 +41,7 @@ abstract class CheckChangelog : DefaultTask() {
 
         // Check we're targeting the current version
         var whatsNew = whatsNew.get().asFile.readLines()
-        if (whatsNew[0] != "New features in CC: Tweaked $version") {
+        if (whatsNew[0] != "New features in CC: Rewired $version") {
             ok = false
             logger.error("Expected `whatsnew.md' to target $version.")
         }

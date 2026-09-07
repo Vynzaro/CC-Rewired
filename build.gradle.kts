@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2022 The CC: Tweaked Developers
+// SPDX-FileCopyrightText: 2026 Vynzaro
 //
 // SPDX-License-Identifier: MPL-2.0
 
@@ -23,8 +24,8 @@ val mcVersion = project.extensions.getByType<VersionCatalogsExtension>().named("
 
 githubRelease {
     token(findProperty("githubApiKey") as String? ?: "")
-    owner = "cc-tweaked"
-    repo = "CC-Tweaked"
+    owner = "Vynzaro"
+    repo = "CC-Rewired"
     targetCommitish = cct.gitBranch
 
     tagName = "v$mcVersion-$modVersion"

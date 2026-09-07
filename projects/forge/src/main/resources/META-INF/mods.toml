@@ -1,26 +1,26 @@
 # SPDX-FileCopyrightText: 2019 The CC: Tweaked Developers
+# SPDX-FileCopyrightText: 2026 Vynzaro
 #
 # SPDX-License-Identifier: MPL-2.0
 
 modLoader="javafml"
 loaderVersion="[47,48)"
 
-issueTrackerURL="https://github.com/cc-tweaked/CC-Tweaked/issues"
+issueTrackerURL="https://github.com/Vynzaro/CC-Rewired/issues"
 logoFile="pack.png"
 
-license="ComputerCraft Public License (https://raw.githubusercontent.com/dan200/ComputerCraft/master/LICENSE)"
+license="ComputerCraft Public License 1.0 and other file-level licenses (https://github.com/Vynzaro/CC-Rewired/blob/mb-1.20.x/LICENSING.md)"
 
 [[mods]]
 modId="computercraft"
 version="${file.jarVersion}"
-displayName="CC: Tweaked"
-displayURL="https://tweaked.cc"
-updateJSONURL = "https://api.modrinth.com/updates/cc-tweaked/forge_updates.json"
+displayName="CC: Rewired"
+displayURL="https://modrinth.com/project/cc-rewired"
 
-credits="Created by Daniel Ratcliffe (@DanTwoHundred)"
-authors="Daniel Ratcliffe, Aaron Mills, SquidDev"
+credits="Forked from CC: Tweaked and based on ComputerCraft by Daniel Ratcliffe and Aaron Mills"
+authors="Vynzaro and CC: Rewired contributors"
 description='''
-CC: Tweaked is a fork of ComputerCraft, adding programmable computers, turtles and more to Minecraft.
+CC: Rewired is a modern reengineering of ComputerCraft for current Minecraft, built from CC: Tweaked while preserving ecosystem compatibility.
 '''
 
 [[dependencies.computercraft]]

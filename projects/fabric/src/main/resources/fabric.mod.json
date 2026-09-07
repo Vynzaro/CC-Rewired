@@ -1,19 +1,21 @@
 {
     "schemaVersion": 1,
     "id": "computercraft",
-    "name": "CC: Tweaked",
+    "name": "CC: Rewired",
     "version": "${version}",
-    "description": "CC: Tweaked is a fork of ComputerCraft, adding programmable computers, turtles and more to Minecraft.",
-    "license": "ComputerCraft Public License (https://raw.githubusercontent.com/dan200/ComputerCraft/master/LICENSE)",
+    "description": "A modern reengineering of ComputerCraft for current Minecraft, built from CC: Tweaked while preserving ecosystem compatibility.",
+    "license": "ComputerCraft Public License 1.0 and other file-level licenses",
     "icon": "pack.png",
     "contact": {
-        "homepage": "https://tweaked.cc/",
-        "issues": "https://github.com/cc-tweaked/cc-tweaked/issues"
+        "homepage": "https://modrinth.com/project/cc-rewired",
+        "issues": "https://github.com/Vynzaro/CC-Rewired/issues",
+        "sources": "https://github.com/Vynzaro/CC-Rewired"
     },
     "authors": [
-        "Daniel Ratcliffe",
-        "Aaron Mills",
-        "SquidDev"
+        "Vynzaro"
+    ],
+    "contributors": [
+        "CC: Rewired contributors"
     ],
     "environment": "*",
     "entrypoints": {
