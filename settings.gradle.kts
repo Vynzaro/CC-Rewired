@@ -21,7 +21,7 @@ pluginManagement {
         maven("https://maven.squiddev.cc") {
             name = "SquidDev"
             content {
-                includeGroup("cc.rewired.vanilla-extract")
+                includeGroup("cc.tweaked.vanilla-extract")
             }
         }
     }
@@ -33,7 +33,7 @@ plugins {
 
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
-rootProject.name = "cc-tweaked"
+rootProject.name = "cc-rewired"
 
 include(":core-api")
 include(":core")
