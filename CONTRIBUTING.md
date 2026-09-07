@@ -1,11 +1,12 @@
 <!--
-SPDX-FileCopyrightText: 2020 The CC: Tweaked Developers
+SPDX-FileCopyrightText: 2020 The CC: Rewired Developers
+SPDX-FileCopyrightText: 2026 Vynzaro
 
 SPDX-License-Identifier: MPL-2.0
 -->
 
-# Contributing to CC: Tweaked
-As with many open source projects, CC: Tweaked thrives on contributions from other people! This document (hopefully)
+# Contributing to CC: Rewired
+As with many open source projects, CC: Rewired thrives on contributions from other people! This document (hopefully)
 provides an introduction as to how to get started with helping out.
 
 If you've any other questions, [just ask the community][community] or [open an issue][new-issue].
@@ -14,7 +15,7 @@ If you've any other questions, [just ask the community][community] or [open an i
  - [Reporting issues](#reporting-issues)
  - [Translations](#translations)
  - [Setting up a development environment](#setting-up-a-development-environment)
- - [Developing CC: Tweaked](#developing-cc-tweaked)
+ - [Developing CC: Rewired](#developing-cc-Rewired)
  - [Writing documentation](#writing-documentation)
 
 ## Reporting issues
@@ -25,30 +26,30 @@ use the issue templates - they provide a useful hint on what information to prov
 Translations are managed through [CrowdIn], an online interface for managing language strings.
 
 ## Setting up a development environment
-In order to develop CC: Tweaked, you'll need to download the source code and then run it.
+In order to develop CC: Rewired, you'll need to download the source code and then run it.
 
  - Make sure you've got the following software installed:
    - Java Development Kit 25 (JDK). This can be downloaded from [Adoptium].
    - [Git](https://git-scm.com/).
    - [NodeJS 20 or later][node].
 
- - Download CC: Tweaked's source code:
+ - Download CC: Rewired's source code:
    ```
-   git clone https://github.com/cc-tweaked/CC-Tweaked.git
-   cd CC-Tweaked
+   git clone https://github.com/cc-Rewired/CC-Rewired.git
+   cd CC-Rewired
    ```
 
- - Build CC: Tweaked with `./gradlew build`. This will be very slow the first time it runs, as it needs to download a
+ - Build CC: Rewired with `./gradlew build`. This will be very slow the first time it runs, as it needs to download a
    lot of dependencies (and decompile Minecraft several times). Subsequent runs should be much faster!
 
- - You're now ready to start developing CC: Tweaked. Running `./gradlew :forge:runClient` or
+ - You're now ready to start developing CC: Rewired. Running `./gradlew :forge:runClient` or
    `./gradle :fabric:runClient` will start Minecraft under Forge and Fabric respectively.
 
 If you want to run CC:T in a normal Minecraft instance, run `./gradlew assemble` and copy the `.jar` from
 `projects/forge/build/libs` (for Forge) or `projects/fabric/build/libs` (for Fabric).
 
-## Developing CC: Tweaked
-Before making any major changes to CC: Tweaked, I'd recommend starting opening an issue or starting a discussion on
+## Developing CC: Rewired
+Before making any major changes to CC: Rewired, I'd recommend starting opening an issue or starting a discussion on
 GitHub first. It's often helpful to discuss features before spending time developing them!
 
 Once you're ready to start programming, have a read of the [the architecture document][architecture] first. While it's
@@ -61,7 +62,7 @@ AI model will be immediately rejected.
 ### Testing
 When making larger changes, it may be useful to write a test to make sure your code works as expected.
 
-CC: Tweaked has several test suites, each designed to test something different:
+CC: Rewired has several test suites, each designed to test something different:
 
  - In order to test CraftOS and its builtin APIs, we have a test suite written in Lua located at
    `projects/core/src/test/resources/test-rom/`. These don't rely on any Minecraft code, which means they can run on
@@ -84,7 +85,7 @@ CC: Tweaked has several test suites, each designed to test something different:
 For more information, [see the architecture document][architecture].
 
 ## Writing documentation
-When writing documentation for [CC: Tweaked's documentation website][docs], it may be useful to build the documentation
+When writing documentation for [CC: Rewired's documentation website][docs], it may be useful to build the documentation
 and preview it yourself before submitting a PR.
 
 You'll first need to [set up a development environment as above](#setting-up-a-development-environment).
@@ -102,14 +103,14 @@ When writing long-form documentation (such as the guides in [doc/guides](doc/gui
 narrative. Think of what you want the user to learn or achieve, then start introducing a simple concept, and then talk
 about how you can build on that until you've covered everything!
 
-[new-issue]: https://github.com/cc-tweaked/CC-Tweaked/issues/new/choose "Create a new issue"
+[new-issue]: https://github.com/cc-Rewired/CC-Rewired/issues/new/choose "Create a new issue"
 [community]: README.md#community "Get in touch with the community."
 [Adoptium]: https://adoptium.net/temurin/releases?version=25 "Download OpenJDK 25"
 [illuaminate]: https://github.com/SquidDev/illuaminate/ "Illuaminate on GitHub"
-[docs]: https://tweaked.cc/ "CC: Tweaked documentation"
+[docs]: https://Rewired.cc/ "CC: Rewired documentation"
 [ldoc]: http://stevedonovan.github.io/ldoc/ "ldoc, a Lua documentation generator."
 [mc-test]: https://www.youtube.com/watch?v=vXaWOJTCYNg
 [busted]: https://github.com/Olivine-Labs/busted "busted: Elegant Lua unit testing."
 [node]: https://nodejs.org/en/ "Node.js"
 [architecture]: projects/ARCHITECTURE.md
-[Crowdin]: https://crowdin.com/project/cc-tweaked/
+[Crowdin]: https://crowdin.com/project/cc-Rewired/
