@@ -39,6 +39,13 @@ java {
 }
 
 repositories {
+    maven("https://ldtteam.jfrog.io/artifactory/parchmentmc-public/") {
+        name = "ParchmentMirror"
+        content {
+            includeGroup("org.parchmentmc.data")
+        }
+    }
+
     mavenCentral()
 
     val mainMaven = maven("https://maven.squiddev.cc/mirror") {
