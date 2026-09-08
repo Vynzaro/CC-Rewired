@@ -5,16 +5,16 @@ SPDX-FileCopyrightText: 2026 Vynzaro
 SPDX-License-Identifier: MPL-2.0
 -->
 
-<p align="center">
+<p align="left">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="doc/logo-darkmode.png">
     <source media="(prefers-color-scheme: light)" srcset="doc/logo.png">
     <img alt="CC: Rewired" src="doc/logo.png" width="413" height="64">
   </picture>
 </p>
+---
 
 # CC: Rewired
-
 > ComputerCraft, rewired for modern Minecraft.
 
 > [!WARNING]
