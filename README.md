@@ -13,8 +13,9 @@ SPDX-License-Identifier: MPL-2.0
   </picture>
 </p>
 
-# CC: Rewired
 > ComputerCraft, rewired for modern Minecraft.
+
+---
 
 > [!WARNING]
 > CC: Rewired is in early alpha development. Expect incomplete visual changes, compatibility work and breaking changes
