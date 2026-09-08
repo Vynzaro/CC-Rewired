@@ -12,7 +12,6 @@ SPDX-License-Identifier: MPL-2.0
     <img alt="CC: Rewired" src="doc/logo.png" width="413" height="64">
   </picture>
 </p>
----
 
 # CC: Rewired
 > ComputerCraft, rewired for modern Minecraft.
