@@ -51,6 +51,12 @@ if a tested migration path exists for worlds, programs and addon mods.
 
 Only install files published through these project pages or produced by this repository's GitHub Actions workflow.
 
+## Roadmap and engineering documents
+
+Development is divided into gated release lines instead of implementing every planned system at once. Read the
+[version roadmap] for the current milestone, future CraftOS, device, power, networking, server, robotics and integration
+work. The inherited module layout and loader boundaries are described in [architecture].
+
 ## Building from source
 
 The build currently requires JDK 25 and emits Java 17-compatible bytecode for Minecraft 1.20.1.
@@ -82,3 +88,5 @@ history are preserved. Licensing is recorded per file through SPDX metadata; see
 [CONTRIBUTING.md]: CONTRIBUTING.md
 [LICENSING.md]: LICENSING.md
 [`LICENSES/`]: LICENSES/
+[version roadmap]: RW-DOCS/ROADMAP.md
+[architecture]: RW-DOCS/ARCHITECTURE.md

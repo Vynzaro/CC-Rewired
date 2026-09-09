@@ -6,6 +6,11 @@ SPDX-License-Identifier: MPL-2.0
 -->
 
 # Architecture
+
+> [!NOTE]
+> This document describes the current inherited code architecture. Planned subsystem changes and their required order
+> are tracked separately in the [CC: Rewired roadmap](ROADMAP.md).
+
 CC: Rewired inherits a complex project layout from CC: Tweaked, as there are several use-cases to support (multiple mod loaders,
 usable outside of Minecraft). As such, it can be tricky to understand how the code is structured and how the various
 sub-projects interact. This document provides a high-level overview of the entire mod.

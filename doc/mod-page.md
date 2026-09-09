@@ -41,6 +41,7 @@ compatibility effects documented per release.
 
 - [Source code and development builds][GitHub]
 - [Issue tracker]
+- [Version roadmap]
 - [Modrinth]
 - [CurseForge]
 - [Licensing and attribution]
@@ -51,6 +52,7 @@ CC: Rewired is maintained by **Vynzaro**. It is not affiliated with or endorsed 
 [ComputerCraft]: https://github.com/dan200/ComputerCraft
 [GitHub]: https://github.com/Vynzaro/CC-Rewired
 [Issue tracker]: https://github.com/Vynzaro/CC-Rewired/issues
+[Version roadmap]: https://github.com/Vynzaro/CC-Rewired/blob/mb-1.20.x/RW-DOCS/ROADMAP.md
 [Modrinth]: https://modrinth.com/project/cc-rewired
 [CurseForge]: https://www.curseforge.com/minecraft/mc-mods/cc-rewired
 [Licensing and attribution]: https://github.com/Vynzaro/CC-Rewired/blob/mb-1.20.x/LICENSING.md

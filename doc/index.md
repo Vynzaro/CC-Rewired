@@ -42,7 +42,8 @@ CC: Rewired retains the proven ComputerCraft feature set inherited from CC: Twea
 
 The project will modernise these systems in controlled stages: interface and block presentation first, followed by a
 new user experience and, after separate design work, modern networking, power and peripheral infrastructure. Planned
-features are not advertised as released features until they exist in a tested build.
+features are not advertised as released features until they exist in a tested build. The ordered milestones and their
+acceptance gates are maintained in the [version roadmap].
 
 ## Compatibility
 
@@ -59,6 +60,7 @@ tutorials remain useful because the first CC: Rewired versions preserve their pr
 
 - [Source code]
 - [Issue tracker]
+- [Version roadmap]
 - [Contributing guide]
 - [Licensing and attribution]
 
@@ -71,5 +73,6 @@ CC: Rewired is maintained by Vynzaro and is not affiliated with or endorsed by t
 [GitHub Actions]: https://github.com/Vynzaro/CC-Rewired/actions
 [Source code]: https://github.com/Vynzaro/CC-Rewired
 [Issue tracker]: https://github.com/Vynzaro/CC-Rewired/issues
+[Version roadmap]: https://github.com/Vynzaro/CC-Rewired/blob/mb-1.20.x/RW-DOCS/ROADMAP.md
 [Contributing guide]: https://github.com/Vynzaro/CC-Rewired/blob/mb-1.20.x/CONTRIBUTING.md
 [Licensing and attribution]: https://github.com/Vynzaro/CC-Rewired/blob/mb-1.20.x/LICENSING.md

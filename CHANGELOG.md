@@ -40,6 +40,8 @@ interface, networking, peripheral, power-system or model redesigns.
 - Added `LICENSING.md` to explain the ComputerCraft → CC: Tweaked → CC: Rewired lineage and file-level licensing.
 - Added CC: Rewired-specific bug, feature, pull-request and general issue guidance.
 - Added manually triggered verification builds through GitHub Actions.
+- Added `RW-DOCS/` with a documentation index and gated version roadmap covering the visual, CraftOS, device, power,
+  networking, server, industrial, robotics and optional integration plans.
 
 ### Changed
 
@@ -52,6 +54,8 @@ interface, networking, peripheral, power-system or model redesigns.
   name to identify CC: Rewired.
 - Reworked the README, contribution guide, code of conduct, architecture notes, mod pages and API documentation around
   the new project's scope and attribution requirements.
+- Moved the contributor architecture guide from `projects/ARCHITECTURE.md` to `RW-DOCS/ARCHITECTURE.md` and updated its
+  references.
 - Preserved upstream creators and contributors in project lineage and in-game credits instead of presenting them as
   current CC: Rewired maintainers.
 

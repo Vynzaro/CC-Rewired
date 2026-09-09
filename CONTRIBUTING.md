@@ -59,6 +59,9 @@ but new features do not need a simultaneous Fabric implementation unless the rel
 Read [the architecture document] before modifying shared code. Do not rename the `computercraft` mod ID, resource
 namespace, Lua APIs or `dan200.computercraft` packages as part of an unrelated change.
 
+Before proposing a new subsystem, check the [roadmap]. Features assigned to later milestones need an approved design
+issue before implementation so foundational APIs are not improvised out of order.
+
 ## Tests
 
 - Core and CraftOS tests: `./gradlew :core:test`
@@ -91,6 +94,7 @@ Preserve every inherited SPDX copyright and license line. Add new copyright noti
 Binary assets need appropriate `.license` sidecars or `REUSE.toml` annotations. See [LICENSING.md].
 
 [issue templates]: https://github.com/Vynzaro/CC-Rewired/issues/new/choose
-[the architecture document]: projects/ARCHITECTURE.md
+[the architecture document]: RW-DOCS/ARCHITECTURE.md
+[roadmap]: RW-DOCS/ROADMAP.md
 [illuaminate]: https://github.com/SquidDev/illuaminate/
 [LICENSING.md]: LICENSING.md
