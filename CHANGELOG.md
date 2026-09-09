@@ -42,6 +42,7 @@ interface, networking, peripheral, power-system or model redesigns.
 - Added manually triggered verification builds through GitHub Actions.
 - Added `RW-DOCS/` with a documentation index and gated version roadmap covering the visual, CraftOS, device, power,
   networking, server, industrial, robotics and optional integration plans.
+- Added a pre-1.0 versioning policy and maintainer release checklist.
 
 ### Changed
 
@@ -56,6 +57,8 @@ interface, networking, peripheral, power-system or model redesigns.
   the new project's scope and attribution requirements.
 - Moved the contributor architecture guide from `projects/ARCHITECTURE.md` to `RW-DOCS/ARCHITECTURE.md` and updated its
   references.
+- Split the `0.1.x` visual milestone into numbered public checkpoints; prerelease suffixes now apply only when an
+  individual candidate requires them.
 - Preserved upstream creators and contributors in project lineage and in-game credits instead of presenting them as
   current CC: Rewired maintainers.
 

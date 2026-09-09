@@ -12,6 +12,8 @@ are not required at the repository root.
 ## Current documents
 
 - [Roadmap](ROADMAP.md): ordered release lines, scope, acceptance gates and deferred research.
+- [Versioning policy](VERSIONING.md): numbering rules, prerelease channels and Git tag format.
+- [Release checklist](RELEASE-CHECKLIST.md): required preparation, validation and publication steps.
 - [Architecture](ARCHITECTURE.md): inherited module layout, loader boundaries and testing architecture.
 
 ## Repository documentation policy

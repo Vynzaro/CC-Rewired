@@ -55,7 +55,9 @@ Only install files published through these project pages or produced by this rep
 
 Development is divided into gated release lines instead of implementing every planned system at once. Read the
 [version roadmap] for the current milestone, future CraftOS, device, power, networking, server, robotics and integration
-work. The inherited module layout and loader boundaries are described in [architecture].
+work. Release numbers and prerelease channels are defined in the [versioning policy], while maintainers use the
+[release checklist] before publication. The inherited module layout and loader boundaries are described in
+[architecture].
 
 ## Building from source
 
@@ -89,4 +91,6 @@ history are preserved. Licensing is recorded per file through SPDX metadata; see
 [LICENSING.md]: LICENSING.md
 [`LICENSES/`]: LICENSES/
 [version roadmap]: RW-DOCS/ROADMAP.md
+[versioning policy]: RW-DOCS/VERSIONING.md
+[release checklist]: RW-DOCS/RELEASE-CHECKLIST.md
 [architecture]: RW-DOCS/ARCHITECTURE.md

@@ -55,11 +55,19 @@ not be presented as authorship, endorsement or completed compatibility.
 
 ## Version policy
 
-- Versions follow semantic versioning while the public API is being established.
-- `0.x` release lines may contain breaking changes, but every intentional incompatibility must be documented.
-- Alpha builds are incomplete development previews. Beta begins only after the corresponding feature set is complete.
+Before 1.0, CC: Rewired uses `0.<release-line>.<iteration>`: the second component identifies the capability line in
+this roadmap and the third identifies a publishable checkpoint within it. Consequently, `0.1.x` is a family of normal
+development releases, not a family permanently labelled alpha.
+
+- `0.1.x` and `0.1.XX` are planning notation; actual versions are `0.1.0`, `0.1.1`, `0.1.2` and so on.
+- `alpha.N`, `beta.N` and `rc.N` suffixes apply only to an individual candidate which needs that stability label.
+- A version without a suffix is the supported public checkpoint for that line, though all `0.x` APIs may still change.
+- Every intentional incompatibility must be documented.
 - No calendar dates are assigned until contributor capacity and technical estimates are credible.
-- A milestone may be split into additional minor versions instead of merging unfinished systems.
+- Unreleased iterations may be merged, split or reordered instead of shipping incomplete systems.
+
+The complete rules are defined in [`VERSIONING.md`](VERSIONING.md). Publication must follow
+[`RELEASE-CHECKLIST.md`](RELEASE-CHECKLIST.md). Strict `MAJOR.MINOR.PATCH` Semantic Versioning begins at `1.0.0`.
 
 ## Development sequence
 
@@ -95,6 +103,27 @@ new infrastructure systems.
 - First modern computer interface frame, retaining terminal access and existing behaviour.
 - Accessibility review for contrast, text scale and colour-independent state indicators.
 - Contributor tasks for textures, models, UI, translation, testing and documentation.
+
+### Planned iterations
+
+These are scoped public checkpoints, not mandatory alpha releases. The contents may be merged or split before release,
+but a number becomes permanent once published.
+
+| Version | Deliverable | Minimum release gate |
+| --- | --- | --- |
+| `0.1.0-alpha.1` | Initial fork preview: identity, metadata, attribution, documentation and build contingency | Reproducible development JAR and honest alpha labelling |
+| `0.1.0` | First supported CC: Rewired foundation build | Identity and distribution metadata complete; required CI and installation smoke test pass |
+| `0.1.1` | Visual system and asset workflow | Palette, materials, pixel-density rules, templates and provenance workflow documented and used in-game |
+| `0.1.2` | Computer family | Standard, advanced and command computers complete in block, item and interface presentation |
+| `0.1.3` | Mobile and robotic computers | Pocket computers and turtles follow the same standard/advanced visual language |
+| `0.1.4` | Displays and terminal framing | Normal and advanced monitors plus the existing terminal frame are visually coherent and readable |
+| `0.1.5` | Existing peripheral family | Modems, printers, speakers, disk drives and other inherited peripherals are visually modernised without new network behaviour |
+| `0.1.6` | Supporting presentation | Existing items, recipes, sounds and restrained animations receive the required visual and audio pass |
+| `0.1.7` | Accessibility and coverage | Translation layout, contrast, state indicators and remaining inherited asset coverage are verified |
+| `0.1.8` | Visual-line stabilisation | Compatibility, visual consistency, documentation and distributable JARs satisfy the complete `0.1.x` exit gate |
+
+This table does not justify filler releases. If adjacent deliverables are completed and validated together, they may be
+combined into the next unpublished iteration and later numbers adjusted.
 
 ### Explicit exclusions
 
@@ -373,9 +402,10 @@ condition. Large ideas without those fields remain discussions rather than sched
 
 ## Current reality
 
-The current `0.1.0-alpha.1` line establishes identity, metadata, documentation and build reliability. It does not yet
-implement the planned visual overhaul, CraftOS Rewired, device bus, power system, network stack, physical cables,
-servers, drones or OpenComputers interoperability.
+The current `0.1.0-alpha.1` candidate establishes identity, metadata, documentation and build reliability. It is the
+prerelease candidate for `0.1.0`, not the naming pattern for every visual iteration. It does not yet implement the
+planned visual overhaul, CraftOS Rewired, device bus, power system, network stack, physical cables, servers, drones or
+OpenComputers interoperability.
 
 [ComputerCraft]: https://github.com/dan200/ComputerCraft
 [CC: Tweaked]: https://github.com/cc-tweaked/CC-Tweaked

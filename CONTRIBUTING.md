@@ -62,6 +62,9 @@ namespace, Lua APIs or `dan200.computercraft` packages as part of an unrelated c
 Before proposing a new subsystem, check the [roadmap]. Features assigned to later milestones need an approved design
 issue before implementation so foundational APIs are not improvised out of order.
 
+Changes prepared for publication must follow the [versioning policy] and [release checklist]. Do not invent version
+numbers in individual pull requests or move work between release lines without updating the roadmap.
+
 ## Tests
 
 - Core and CraftOS tests: `./gradlew :core:test`
@@ -96,5 +99,7 @@ Binary assets need appropriate `.license` sidecars or `REUSE.toml` annotations. 
 [issue templates]: https://github.com/Vynzaro/CC-Rewired/issues/new/choose
 [the architecture document]: RW-DOCS/ARCHITECTURE.md
 [roadmap]: RW-DOCS/ROADMAP.md
+[versioning policy]: RW-DOCS/VERSIONING.md
+[release checklist]: RW-DOCS/RELEASE-CHECKLIST.md
 [illuaminate]: https://github.com/SquidDev/illuaminate/
 [LICENSING.md]: LICENSING.md
